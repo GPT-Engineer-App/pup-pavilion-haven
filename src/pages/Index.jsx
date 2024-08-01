@@ -4,10 +4,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { PawPrint, Heart, Home } from "lucide-react";
 
 const dogBreeds = [
-  { name: "Labrador Retriever", description: "Friendly and outgoing" },
-  { name: "German Shepherd", description: "Intelligent and versatile" },
-  { name: "Golden Retriever", description: "Gentle and affectionate" },
-  { name: "Bulldog", description: "Calm and courageous" },
+  { name: "Labrador Retriever", description: "Friendly and outgoing", image: "/placeholder.svg" },
+  { name: "German Shepherd", description: "Intelligent and versatile", image: "/placeholder.svg" },
+  { name: "Golden Retriever", description: "Gentle and affectionate", image: "/placeholder.svg" },
+  { name: "Bulldog", description: "Calm and courageous", image: "/placeholder.svg" },
 ];
 
 const benefits = [
@@ -35,6 +35,7 @@ const Index = () => {
                 <CardTitle>{breed.name}</CardTitle>
               </CardHeader>
               <CardContent>
+                <img src={breed.image} alt={breed.name} className="mx-auto object-cover w-full h-48 mb-4 rounded-md" />
                 <p>{breed.description}</p>
               </CardContent>
             </Card>
@@ -71,6 +72,20 @@ const Index = () => {
         <h2 className="text-3xl font-semibold mb-6">Ready to Bring Home a Furry Friend?</h2>
         <p className="mb-6">Consider adopting a dog from your local shelter and give a loving home to a dog in need.</p>
         <Button size="lg">Find a Dog to Adopt</Button>
+      </section>
+
+      <section className="mt-12">
+        <h2 className="text-3xl font-semibold mb-6">Dog Gallery</h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {[...Array(8)].map((_, index) => (
+            <img
+              key={index}
+              src="/placeholder.svg"
+              alt={`Dog ${index + 1}`}
+              className="mx-auto object-cover w-full h-48 rounded-md"
+            />
+          ))}
+        </div>
       </section>
     </div>
   );
