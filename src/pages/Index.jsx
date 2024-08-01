@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Paw, Heart, Home } from "lucide-react";
+import { PawPrint, Heart, Home } from "lucide-react";
 
 const dogBreeds = [
   { name: "Labrador Retriever", description: "Friendly and outgoing" },
@@ -12,7 +12,7 @@ const dogBreeds = [
 
 const benefits = [
   { icon: <Heart className="h-6 w-6" />, title: "Companionship", description: "Dogs provide loyal friendship and emotional support." },
-  { icon: <Paw className="h-6 w-6" />, title: "Exercise", description: "Regular walks and playtime keep you active and healthy." },
+  { icon: <PawPrint className="h-6 w-6" />, title: "Exercise", description: "Regular walks and playtime keep you active and healthy." },
   { icon: <Home className="h-6 w-6" />, title: "Home Security", description: "Dogs can alert you to potential dangers and deter intruders." },
 ];
 
